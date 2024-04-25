@@ -69,7 +69,7 @@ fillCtx(BG_COLOR);
 
 (function animate() {
   requestAnimationFrame(animate);
-  // fillCtx("#0001");
+  fillCtx("#0001");
   
   VectorFL.vectors.forEach(vec => {
     // vec.draw();
@@ -151,7 +151,7 @@ Utils.addEventListeners(cnv, {
     const dir = Math.atan2(
       (x - createVec.initial[0]),
       (y - createVec.initial[1])
-      ) - 3*Math.PI/2;
+      );
     
     const len = Math.hypot(
       (x - createVec.initial[0]),
