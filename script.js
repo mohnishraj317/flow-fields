@@ -1,4 +1,4 @@
-const PARTICLE_COLOR = colors.modify("#c8eadf", {l: 60, s: 60, a: .2});
+const PARTICLE_COLOR = colors.modify("#c8eadf", {h: 240, l: 60, s: 60, a: .2});
 const BG_COLOR = colors.modify("cobaltblue", {l: 10, a: 1});
 const MAX_DENSITY = Math.max(VectorFL.density.x, VectorFL.density.y);
 const VEC_LEN = VectorFL.countX * VectorFL.countY;
@@ -24,7 +24,7 @@ function createField() {
   
     const vectorFL = new VectorFL(
       mag, dir, posi,
-      colors.modify("red", {h: 180 + Utils.randFloat(60, 180), s: 100, l: 80}),
+      colors.modify("red", {h: Utils.randFloat(60, 180), s: 100, l: 80}),
       noise[i] / 10
     );
   });
@@ -39,7 +39,7 @@ function createParticle() {
     size: Utils.randFloat(.2, .3),
     velocity: new Vector(Utils.randFloat(.2, .4), // i / len * (2 * Math.PI)),
       Utils.randFloat(0, Math.PI * 2)),
-    color: colors.modify("red", { a: .2, h: 200 * 360, s: Utils.randFloat(60, 100), l: Utils.randFloat(50, 90) })
+    color: colors.modify("red", { a: .2, h: Utils.randFloat(240, 360), s: Utils.randFloat(60, 100), l: Utils.randFloat(50, 90) })
   });
 }
 

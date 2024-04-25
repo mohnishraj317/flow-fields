@@ -1,5 +1,3 @@
-devicePixelRatio = 5
-
 const cnv = document.querySelector(".cnv"),
   ctx = cnv.getContext("2d"),
   h = innerHeight,
